@@ -9,7 +9,7 @@ const validCredsMin: { username: string; password: string } = {
   username: "nmg",
   password: "Alex123@",
 };
-const validCredsMax: { username: string; password: string } = {
+const validCredsMax: { username: string; password: string } = { 
   username: "abcdefgh2jklmnopqrstuvwxyza1cd0fghijklmn",
   password: "Defghijk6mnopqrstuvw",
 };

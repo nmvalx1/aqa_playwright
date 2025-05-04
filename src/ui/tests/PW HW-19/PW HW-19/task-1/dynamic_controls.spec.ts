@@ -20,15 +20,15 @@ test("dynamic_controls waits", async ({ page }) => {
   await page.getByRole("link", { name: "Dynamic Controls" }).click();
   const buttonRemove = page.getByRole("button", { name: "Remove" });
   await buttonRemove.waitFor({ state: "visible", timeout: 10000 });
-  await page.getByRole("heading", { name: "Dynamic Controls" }).isVisible();
-  await page.getByText(DYNAMIC_CONTROL_TEXTS.DEMONSTRATE).isVisible();
+  await expect(page.getByRole("heading", { name: "Dynamic Controls" })).toBeVisible();
+  await expect(page.getByText(DYNAMIC_CONTROL_TEXTS.DEMONSTRATE)).toBeVisible();
   const checkBox = page.locator('//input[@type="checkbox"]');
   await checkBox.click();
   await buttonRemove.click();
   await buttonRemove.waitFor({ state: "detached", timeout: 10000 });
   const buttonAdd = page.getByRole("button", { name: "Add" });
   await expect(buttonAdd).toBeEnabled();
-  await page.getByText(DYNAMIC_CONTROL_TEXTS.GONE).isVisible();
+  await expect(page.getByText(DYNAMIC_CONTROL_TEXTS.GONE)).toBeVisible();
   await buttonAdd.click();
   await checkBox.waitFor({ state: "visible", timeout: 10000 });
   await page.getByText(DYNAMIC_CONTROL_TEXTS.BACK).isVisible;

@@ -31,5 +31,5 @@ test("dynamic_controls waits", async ({ page }) => {
   await expect(page.getByText(DYNAMIC_CONTROL_TEXTS.GONE)).toBeVisible();
   await buttonAdd.click();
   await checkBox.waitFor({ state: "visible", timeout: 10000 });
-  await page.getByText(DYNAMIC_CONTROL_TEXTS.BACK).isVisible;
+  await expect(page.getByText(DYNAMIC_CONTROL_TEXTS.BACK)).toBeVisible();
 });

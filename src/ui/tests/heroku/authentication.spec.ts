@@ -1,7 +1,7 @@
 import test, { expect } from "@playwright/test";
 
 test.describe("[UI] Authentication", () => {
-  test.skip("Aith with valid credentioals", async ({ page }) => {
+  test("Aith with valid credentioals", async ({ page }) => {
     const valiCreadentials: { username: string; pass: string } = {
       username: "tomsmith",
       pass: "SuperSecretPassword!",

@@ -1,0 +1,7 @@
+export enum STATUSES {
+  OK = 200,
+  NOT_FOUND = 404,
+  FORBBIDEN = 403,
+  UNAUTHORIZADE = 401,
+  SERVER_ERROR = 500,
+}

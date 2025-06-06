@@ -8,7 +8,7 @@ import { SignIn } from "ui/pages/SignIn.page";
 export interface ISalePortalPages {
   addCustomer: AddNewCustomer;
   customer: Customers;
-  home: Home;
+  homePage: Home;
   signIn: SignIn;
   deleteModal: DeleteModal;
 }
@@ -22,7 +22,7 @@ export const test = base.extend<ISalePortalPages>({
     await use(new Customers(page));
   },
 
-  home: async ({ page }, use) => {
+  homePage: async ({ page }, use) => {
     await use(new Home(page));
   },
 

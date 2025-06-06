@@ -5,10 +5,10 @@ export interface ISalePortalController {
   loginController: SignInController;
 }
 
-const test = base.extend<ISalePortalController>({
+export const test = base.extend<ISalePortalController>({
   loginController: async ({ request }, use) => {
     await use(new SignInController());
-  }
-})
+  },
+});
 
-export { expect , test  } from "@playwright/test";
+export { expect } from "@playwright/test";

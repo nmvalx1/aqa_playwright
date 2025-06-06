@@ -4,4 +4,7 @@ export const apiConfig = {
     LOGIN: "/api/login",
     LOGOUT: "api/logout",
   },
+
 } as const;
+
+
